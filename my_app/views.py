@@ -23,3 +23,4 @@ def blog(request):
     <h1>Blog</h1>
     <a href="/" << First page </a>
     """
+    return HttpResponse(html)
