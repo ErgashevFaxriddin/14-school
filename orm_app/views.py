@@ -7,4 +7,4 @@ def orm_list(request):
     country_list = ""
     for c in countries:
         country_list += f"<li>{c.country_name}</li>"
-    return HttpResponse(f"<ul>{country_list}</ul>")
+    return HttpResponse(f"<ol>{country_list}</ol>")
