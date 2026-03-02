@@ -1,6 +1,6 @@
 from django.urls import path
-from .views import orm_list
+from .views import index_page
 
 urlpatterns = [
-    path('countries/', orm_list, name='orm_list'),
+    path('', index_page, name='orm_list'),
 ]

@@ -3,7 +3,6 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('my_app.urls')),       # main app
-    path('blog/', include('my_app.urls')),  # optional blog paths
-    path('', include('orm_app.urls')),      # countries app
+    path('', include('orm_app.urls')),     # 👈 ROOT delegation
+    path('blog/', include('my_app.urls')),
 ]
