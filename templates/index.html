@@ -15,16 +15,21 @@
             height: 100vh;
             margin: 0;
         }
-        h1 {
-            background: #4CAF50;
-            color: white;
-            padding: 20px 40px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
+    <h1>Salom, {{ ism }}!</h1>
+    <h3>Xodimlar ro'yxati:</h3>
+
+    <ul>
+        {% for emp in employees %}
+            <li>{{ emp.first_name }} {{ emp.last_name }} — {{ emp.email }}</li>
+        {% empty %}
+            <li>Hozircha bazada xodimlar yo'q.</li>
+        {% endfor %}
+    </ul>
+
     </style>
 </head>
 <body>
     <h1>Hello Django</h1>
+
 </body>
 </html>
